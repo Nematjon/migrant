@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/QCSDRQ_13_1_1A" xmlns="http://xml.amadeus.com/QCSDRQ_13_1_1A" elementFormDefault="qualified">
+  <xs:element name="Queue_CountTotal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="queueingOptions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="selectionDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="option">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: a..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="targetOffice" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sourceType">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="sourceQualifier1">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="originatorDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="inHouseIdentification1">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..9</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="9" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="queueNumber" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="queueDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="number">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: n..2</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:decimal" />
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="categorySelection" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="subQueueInfoDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="identificationType">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="itemNumber" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="itemDescription" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..35</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="35" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 5.0.0 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B08000000000000009593C16EDB300C86EF7A8ADC761812DB0D8AA20174F062273B2C6993B8B7008662338E5059F244B9A851F4DD47CB0ED662876D806190B4FC93FC48ADD36DBA8FB334C91FB6FC268CE6D328A467925D5A8BA5E826E1DDE276BE98DF4CD69BEC6B182EC290C59BD8750DE04A2AD0A206CE4E02614B1636A2007E71AE5904C16BAD66A21625B4382B4C1DB053AB4B0589B43C40704EEA0A835216C88A0B14CF077AD7823BDB022B4C097404B936BAF7EA1A347967A1D0BB8DD05D9F8FEB56290A349D95D5C50D6E0967D12AB7B64D465596836269DA938203FC6C4117F0285C7119E5407FFBA7EA41FF3EF3D6F7FF9EBFBD80456934591614900C59A2A20CDD3B3B139D7DABA846D383F2BEA7E57FEEADBF0828530835B6A84C5512B76471FC9EC6C9312DE559142E3346E131CDF244A213DA2D890C012354C78DB0CFD0231ECEA0878BC71FA6222D5DF9423C981A6C05230A6FAF24A8120FC63A62778D23525531F6403FC7127042AA7150FABF0035466AB705370CC317638D711FF878BFDF97191B1AE87922AD69781F84F7630C57C6C64A92360E2208F6451680892C1CE516B61B18622DACEB759FB42CA4EBC6469C151A95E88F121D4EA4311895B37813BC95A024B521687DDE67F495F5E595E3B60E12B42BCBCF3B4A11CFCA637945E51E5AD7B46E65540996F701C6A6D3CDC0F00B4EA43E1B5BFB22A6533610E251CC3E24E7F1639CEF5A68218FE6B7B4D0B5909AEF9E5206AF0D4D2B179827E99A677B0A8DD399080B824777579FEF968764BF630D5D068997EBE51867C323B25E643F30323D17E111F221EDD2B49A76CE09C5AE23FAF3CB38711ECDD92F29586B9D5C040000
+-->
+

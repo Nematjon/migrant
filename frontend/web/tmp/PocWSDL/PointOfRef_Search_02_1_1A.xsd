@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/PFRREQ_02_1_1A" xmlns="http://xml.amadeus.com/PFRREQ_02_1_1A" elementFormDefault="qualified">
+  <xs:element name="PointOfRef_Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="porFndQryParams">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="resultListType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Format limitations: a1</xs:documentation>
+                    </xs:annotation>
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="outputLanguage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                    </xs:annotation>
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="resultMaxItems" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:decimal">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Format limitations: n..3</xs:documentation>
+                    </xs:annotation>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="indexOfItem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:decimal">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Format limitations: n..6</xs:documentation>
+                    </xs:annotation>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="targetCategoryCode" maxOccurs="3">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Format limitations: a3</xs:documentation>
+                    </xs:annotation>
+                    <xs:minLength value="3" />
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="geoCode" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="longitude">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: n..12</xs:documentation>
+                          </xs:annotation>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="latitude">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: n..12</xs:documentation>
+                          </xs:annotation>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="businessId" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="categoryCode">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: a3</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="3" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="foreignKey">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: an..10</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="10" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="porId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Format limitations: an..20</xs:documentation>
+                    </xs:annotation>
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="radius" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:decimal">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Format limitations: n..8</xs:documentation>
+                    </xs:annotation>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="area" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="countryCode" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="stateCode" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: a2</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="2" />
+                          <xs:maxLength value="2" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="iataCode" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="name" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nameOfPOR">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: an..80</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="80" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="language" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="searchType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Format limitations: a1</xs:documentation>
+                    </xs:annotation>
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 4.1 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B080000000000000085904F6B023110C5EFF914DE4BDD285870610F0BBA9EDC16B5F42869326A207FB6996CE9227EF74E76D7E2AD90C3CBCCE4BD5F66B3AED7BBF2B05E1D5FEB62CE67FC992FE84C3E40394025BA095FE68B977C369F6CB68727CE73CE991316B011128A6BEC1AB81DAFDF10507B472A800181A926CEE0647763D25B0B2E627112068119EFCEC9A088A105A67CFB69600F5F2D0DC39B88F232344EDAC0AE3550385F91ECEFFDB33E32A97F62091149AF200A6D906C1C502D9C61E4F8B1E6404E43A3DC96C916AB7B0A4379012B1201D25EF832E34B9646D4BE6F8C268DD72ED6101FC0C7DC127BF7614C7A050871A4F824D0FA6F8597189B3CCB08672AAC50D0E2943696B1E07D7CF82C432B424CF2DD69A963375A0F9C58F9501A4DC678A7A09F561A8CC2BD0F11D438FE0BE2AB9DBAF0010000
+-->
+

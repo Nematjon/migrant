@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TRFPCQ_13_1_1A" xmlns="http://xml.amadeus.com/TRFPCQ_13_1_1A" elementFormDefault="qualified">
+  <xs:element name="DocRefund_ProcessRefund">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="actionDetails" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="statusDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="indicator">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="3" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="otherStatusDetails" minOccurs="0" maxOccurs="98">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="indicator">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="3" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dummysegment" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="printerReference" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="referenceDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="type">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="value" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..14</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="14" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="targetStockProvider" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="stockTypeCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..2</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stockProvider" minOccurs="0">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="refundedItinerary" minOccurs="0" maxOccurs="16">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="airlineCodeRfndItinerary">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="companyIdentification">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="operatingCompany">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..35</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="35" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="originDestinationRfndItinerary">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="origin">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..25</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="25" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="destination">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..25</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="25" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="phoneFaxEmailAddress" minOccurs="0" maxOccurs="3">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="phoneOrEmailType">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..4</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telephoneNumberDetails" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="internationalDialCode" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..25</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="25" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="localPrefixCode" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..25</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="25" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="areaCode" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..25</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="25" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="telephoneNumber">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..25</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="25" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="emailAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..70</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 5.0.0 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B08000000000000009593C16EDB300C86EF7A8ADC7618123BCDD0AD0174F06A273B2C6996BAD82580A15A8C2354963C512E6A147DF7D1B283B68761DB252069E627F9915A67DB6C9FE4595ADC6CF9453C5F4CE32FD3F8F3E427480328453789BF2C2F16CBC562B2DEE41FE37819C72CD924BE6B00574A83113570762F10B66461234AE027EF9B65143DD57A266A21A1C55969EB88DDB7466A4895E31182F7CA54184955222B4F503EDCD26F2DB8772DB0D24AA014E4C69ADEAB6B30E41D85C6E036C2747D3D6E5AAD29D0744E55273FB8128EA2D57EED9A9CBA9483A2B4EDBD865BF8D5822961277C791AE5C07CFDA7EEC1BCE63CF7F3BF14CF8FE050594396030D244396A8A842F7C28E4467DF6AEAD1F6A0821F68853FF7D65F04B42D851E47D4B692C42D5D1EBE65497AC8A43A8AD2E7D66A3C6479912AF4C2F86B2243C008D56123DC03F488871C0C70F1F0DD56A465AAD048005383AB604411EC95022DF1D63A4FECCE7144EA2AC11EE8FB580A5E283D2ECAFC17A0C62AE3B7E0876584669CB5FE0D9FE0F7F73263C3003D4FA43B8DAFA2F86A8CE1CABA442BD2C64104C13DAA123055A5A7DAC2750343AC85F3BDEE9D51A5F2DD388877C2A0167D2AD1E1441AA351394F36D1B304AD680C41E7F332A3AFAC6F4F8ED73A48D0AD5CBFBF518A045601CB136A7FD3FAA6F52BAB2538DE07189B4E3703C30F3851E6685D1D9A984ED94088CF13F6A6384F764991DA720F477A47C57CF1898EBA16CAF07DB6BADBA60C9E1A5A5A21B048B335CFF777D9794913E140F0CBCBB34F1F57BBEB1FACA137A1F0747E23E38AF89CAC47D5EF8DCC80470492FCB5FACE59228C83C7CE0BFB63C278067CBE60BF01EEA178B572040000
+-->
+

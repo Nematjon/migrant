@@ -1,0 +1,11 @@
+**** Missing schemas ****
+Ticket_ATCShopperMasterPricerCalendar_13_1_1A.xsd
+DocRefund_CalculateRefundReply_15_1_1A.xsd
+Ticket_ATCShopperMasterPricerTravelBoardSearchReply_13_1_1A.xsd
+DocRefund_CalculateRefund_15_1_IA.xsd
+DocRefund_SearchRefundRule_05_1_1A.xsd
+QueueMode_ProcessQueue_09_1_IA.xsd
+QueueMode_ProcessQueueReply_09_1_IA.xsd
+Ticket_ATCShopperMasterPricerCalendarReply_13_1_1A.xsd
+Ticket_ATCShopperMasterPricerTravelBoardSearch_13_1_1A.xsd
+DocRefund_SearchRefundRuleReply_05_1_1A.xsd

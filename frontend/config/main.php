@@ -40,19 +40,19 @@ return [
         'errorHandler' => [
             'errorAction' => 'agent/error',
         ],
-        'urlManager' => [
+       /*'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
 			//'baseUrl' => '/backend/web',
-        ],/*
+        ],*/
 		'urlManagerFrontEnd' => [
 			'class' => 'yii\web\urlManager',
 			'baseUrl' => '/frontend/web',
 			'enablePrettyUrl' => true,
 			'showScriptName' => false,
-		]*/
+		]
     ],
 	"defaultRoute"=>"agent",
     'params' => $params,

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/PNRCHG_14_2_1A" xmlns="http://xml.amadeus.com/PNRCHG_14_2_1A" elementFormDefault="qualified">
+  <xs:element name="PNR_ChangeElement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="messageAction">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="messageFunctionDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="businessFunction" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="messageFunction">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="additionalMessageFunction" minOccurs="0" maxOccurs="20">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="responseType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="numberOfUnits" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="numberOfUnitsDetails1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="units">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: n..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:decimal" />
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="unitsQualifier" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="numberOfUnitsDetails2" minOccurs="0" maxOccurs="8">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="units" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: n..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:decimal" />
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="unitsQualifier" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="intelligentWorkstationInfo" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="companyIdentification" minOccurs="0">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="longTextString">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="textStringDetails">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..9999</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="9999" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!--DRAFT: This document is under development and is not approved for 
+publication or reference. The Amadeus IT Group SA assumes no 
+responsibility for the application of the information contained 
+in this document or consequences arising from its application.-->
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 5.1.0 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B080000000000000095934D6FDB300C86EFFA15B9ED3024B6BB0C5803E8E0354E7A68B22EF16E0302C5621CA1B2E4897256A3E87F1F25BB5B7BDA76B1495AE6C7F352EB625BECF2B2581EBE6CF9559ACDA7593ACDE693B20394A29F64D9E2C3A7C5FC7AB2DE94EFD37491A62CDFE4BE6F01574A83110D707614085BB2B01515F0B3F7ED22491E1B3D138D90D0E1ACB24DC28E9D911A96CAF104C17B656A4CA4AA905567A81EF6F46C04F7AE035659097404B9B126784D0386BC93D018DD56983ED4E3A6D39A026DEF547DF6832BE1243AEDD7AE2DA94B396494B63B6AD8C38F0E4C05F7C257E7311D98CFFFD43D983F679EC2FCCF87A70B3854D690E54003A5214BD454A17F6627A2B3EB34F56803A8E8475AF1E760FD2581B695D0E388DAD6327073D0580F49F333B980542751F9A418DEA5B51A93A23C2C157A61FC0D512278842DD908F70001F770062368FC7E676BCA6BEAD85484D480AB61C412ED95022D716F9D278E2F7144EA30C700F76D6C095E283D8A66FE0B566B95F15BF08330B11967AD7FC52AFA6177666C1820B045DAD8F43A49AFC718AEACCBB5A2DC382441701755012E55E5A9B670FDC0131BE17CC8FBCDA84AF97E1CC43B61508B7094E870A2FE1B57996F9227095AD1188256E979465F59684F8E9B3BA4A0BDB979BBAF1489AC229647D4FE4BE7DBCEAFAC96E0780830369D6E0686EF70A2CCC9BA2636319DB28110CF72F6AA38CFEFF3C3FD7677C8E61F69B51BA10C2FF23B068F2D697510785816EBB7E24C8403C15F3C7EBB5FED8AAFACA55BA1F04CEAB251147E45D64505A578360011911D0FF56ECEC2D450680803B21771F86D7F748A383800B38ACDEFC24D433F4EC546ED7976C57E01139BF0DF71040000
+-->
+

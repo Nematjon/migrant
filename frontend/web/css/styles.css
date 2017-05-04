@@ -209,3 +209,85 @@ aside#left-panel{
     bottom: -52px;
 	background: rgba(0,0,0,.63) !important;
 }
+
+.btnSrchDatePicker{
+	display: inline-block;
+}
+
+.btnSrchDatePicker #ui-datepicker-div{
+	margin-top: 33px;
+    margin-left: -65px;
+}
+
+#searchTabs{
+	border: none !important;
+}
+
+.reverseBtn{
+	background-color: transparent !important;
+    border: none;
+    margin-left: -37px !important;
+    z-index: 3;
+}
+
+.fa-rotate180{
+	position: absolute;
+    transform: rotate(180deg);
+    margin-left: -33px;
+    margin-top: 0px;
+}
+
+.fa-rotate50{
+	position: absolute;
+    transform: rotate(50deg);
+    margin-left: -34px;
+    margin-top: 12px;
+}
+
+.fa-f{
+	font-size: 15px;
+}
+
+#myTab1 li:last-child .fa-rotate180, #myTab1 li:last-child .fa-rotate50{
+	margin-left: -28px;
+}
+
+#myTab1 li:last-child .fa-f{
+	font-size: 12px;
+}
+
+.dRoute:nth-child(n+2){
+	margin-top: 26px;
+}
+
+#myTabContent1{
+	padding-bottom: 26px !important;
+}
+
+#addRoute{
+	margin:10px 10px;
+}
+.dRoute:nth-child(1) .rRoute{
+	display:none;
+}
+
+
+.rRoute{
+	position: absolute;
+    z-index: 4;
+    margin-top: -5px;
+    font-size: 12px;
+    margin-left: 9px;
+    cursor: pointer;
+    color: #948484;
+}
+
+
+.tr-group td{
+	border-right:none !important;
+	border-left:none !important;
+}
+
+.acticle-removed{
+	//display:none;
+}

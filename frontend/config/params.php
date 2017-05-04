@@ -33,8 +33,8 @@ return [
         	'url' => 'agent/seach',
         	'icon'=>'fa-search',
         	'items'=>[
-        		['label'=>'Перелеты','url'=>'agent/sflights'  ],
-        		['label'=>'ЖД билеты','url'=>'agent/strain' ],
+        		['label'=>'Перелеты','url'=>'frontend/web/index.php?r=agent/sflights'  ],
+        		['label'=>'ЖД билеты','url'=>'frontend/web/index.php?r=agent/strain' ],
         	]
         ],[
         	'label' => 'Заказы', 

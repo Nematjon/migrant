@@ -51,8 +51,10 @@ class AppAsset extends AssetBundle
 		"smartAdmin/js/smart-chat-ui/smart.chat.ui.min.js",// SmartChat UI : plugin   ENHANCEMENT PLUGINS : NOT A REQUIREMENT
 		"smartAdmin/js/smart-chat-ui/smart.chat.manager.min.js",// ENHANCEMENT PLUGINS : NOT A REQUIREMENT
 		"smartAdmin/js/plugin/pace/pace.min.js",//data-pace-options='{ "restartOnRequestAfter": true }' PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-
+		"smartAdmin/js/plugin/x-editable/x-editable.min.js",
 		"js/scripts.js",// ENHANCEMENT PLUGINS : NOT A REQUIREMENT
-    ];
+    ]; 
+	
     public $depends = [
         //'yii\web\YiiAsset',
         //'yii\bootstrap\BootstrapAsset',

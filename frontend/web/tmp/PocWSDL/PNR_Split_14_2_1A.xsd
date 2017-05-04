@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/PNRSPL_14_2_1A" xmlns="http://xml.amadeus.com/PNRSPL_14_2_1A" elementFormDefault="qualified">
+  <xs:element name="PNR_Split">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reservationInfo" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reservation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="controlNumber">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..20</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="20" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="splitDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="passenger">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="type">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="quantity" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: n..2</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:decimal" />
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="tattoo" minOccurs="0" maxOccurs="49">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..5</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="5" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="otherElement" minOccurs="0" maxOccurs="999">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="type">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="quantity">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: n..2</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:decimal" />
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="tattoo">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..5</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="5" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!--DRAFT: This document is under development and is not approved for 
+publication or reference. The Amadeus IT Group SA assumes no 
+responsibility for the application of the information contained 
+in this document or consequences arising from its application.-->
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 5.1.0 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B080000000000000095934D6FDB300C86EFFA15B9ED3024B6D70C6803E8E0351F97260D12F736C0502DC6112A4B9E2867358AFEF751B2BBB5A76D179BA4298A7C5E7AB3DAAD0E79B15A96F73BFE25CDE6D32C9D66F349D1014AD14FB26C7175BD98DF4C36DBE2739A2ED294E5DBDCF72DE05A6930A201CE1E05C28E2C6C4505FCEC7DBB4892E746CF4423247438AB6C93B0C7CE480D4BE57882E0BD3235265255C8AA33544F477A36827BD701ABAC044A416EAC095ED38021EF243446B715A60FF771D3694D81B677AA3EFBC19570129DF61BD716D4A51C2A4ADB3D6A38C28F0E4C057BE1ABF3580ECCB77FEA1ECC9F9C9730FF6BF9720187CA1AB21C68A03264899A6EE85FD989E81C3A4D3DDA002AFA91563C1CACBF14D0B6127A1C51DB5A066E0E1AEB21697E261790EA242A9FAC867761ADC66455944B855E187F4B94081E614BB6C23D41C03DE460048DDFEF6C4D754D1D9B8A901A70358C58A2BD56A0251EADF3C4F12D8E481DE618E07E8C2DC10BA547D1CC7FC16AAD327E077E102636E3ACF5EF58453FECCE8C0D0304B6481B9BDE24E9CD18C3B575B956541B872208EEA22AC0A5AA3CDD2D5C3FF0C446381FEA3E185529DF8F8378270C6A1152890E27EABF7115F9367991A0158D2168955E67F49585F6E4B8B94309DA9BDB8FFB4A91C82A627946EDEF3BDF767E6DB504C74380B1E9743B30FC8413654ED635B189E9940D847896B37797F37C9F97FBDDA1CCE65F69B51BA10CDFEF3206CF2D69550A2C97ABCD477126C281E06F1E651F8EFB3BD6D25FA1F04CEAB251147E45D64505A578360011915D38521E5BAD3C7B1385EF8D1B22A3B63CBD66BF006FB0142A51040000
+-->
+

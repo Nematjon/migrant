@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/PELTDQ_04_1_1A" xmlns="http://xml.amadeus.com/PELTDQ_04_1_1A" elementFormDefault="qualified">
+  <xs:element name="PNR_CancelName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="elementIdentification" maxOccurs="999">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="referenceType">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="uniqueReference">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: n..5</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:decimal" />
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 5.0.0 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B08000000000000009593C16EDB300C86EF7A8ADC7618123B45BAB60174F06A273B24699678B700816A338E5059F244B9A851F4DD47C90ED6EEB2ED129034F393FC482DB34DB64BF22C3D3E6CF8553C9D8DE39BF1F476B4B0B214DD28BE99CFAEE657F168B9CE3FC7F13C8E59B24E5CD7002EA4022D6AE0EC51206CC8C24614C0CFCE35F3287AA9D544D4A284162785A923F6D8EA52412A2D8F109C93BAC2A89405B2E20CC5D39E7E6BC19D6D8115A6044A41AE8DF65E5D8326EF241406B711BAF3F5B86E95A240D359599D5DEF967012AD724BDBE4D465D92B96A67D54B0879F2DE802B6C215E7410EF4D77FEA1EF4EF9C573FFFDBF1F5192C4AA3C9B2A08064C8121555E8DED889E8EC5A453D1A0F2AF88156F8B3B7FE22A04C21D430A2325549DCD2F9E15B96A487AC942751B8DC1885872C3FA6129DD0EE9EC810304275580BFB041E719F83012E1E56A6222D5D854602981A6C05038A602F24A812F7C63A627789235257097AA01F63293821D5B028FD5F801A23B5DB80EB97119AB1C6B8777C82EFEF65C2FA013C4FA4238DEFA2F86E88E1C2D84449D2C65E04C13ECB02309585A3DAC2763D43AC85755EF787968574DD3088B342A3123E95E870228DD1A09C27EBE8B50425690C41E7F336A1AFCCB7570ED7DA4BD0ADDC7FBC518A045601CB0B2AF7D0BAA6750BA34AB0DC07181B8FD73DC34F3892FA646C1D9A188F594F884F13F6AE38DFE6BBF8F6CBECFA667A47E75C0BA97996AC18BC34B4ABA3C0639A2DF92259EDB3CB7246C282E0D7D38BCFB7D92A4FBFB386DE82C4F3E56D0CABE153B29EA5DF1799018B0804F976B33BDE0B7A37CA3F0176D9CF9FF161D93C9EB15FA7924E3A55040000
+-->
+

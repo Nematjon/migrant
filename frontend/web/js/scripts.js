@@ -2,6 +2,65 @@
 $(document).ready(function() {
 	pageSetUp();// DO NOT REMOVE : GLOBAL FUNCTIONS!
 
+$(".sOften li").on("click",function(){
+	var ct=$("a",this).html();
+	$(this).closest(".input-group").find(".toFrom").val( ct );
+});
+
+$(".reverseBtn").on("click",function(){
+	var clos=$(this).closest(".row");
+	var sFrom=clos.find(".sFrom");
+	var sTo=clos.find(".sTo");
+	var tmp=sFrom.val();
+	sFrom.val( sTo.val() );
+	sTo.val( tmp );
+});
+
+$(document).on("click",".rRoute",function(){
+	$(this).closest(".dRoute").remove();
+});
+	
+$("#addRoute").on("click",function(){
+	var cln=$(".dRoute:last").clone(true);
+	cln.find("input[type='text']").val("");
+	cln.insertAfter(".dRoute:last");
+});
+
+
+	var paramDatePicker={
+		defaultDate: "+0d",
+		changeMonth: true,
+		numberOfMonths: 1,
+		dateFormat: 'dd.mm',
+		prevText: '<i class="fa fa-chevron-left"></i>',
+		nextText: '<i class="fa fa-chevron-right"></i>',
+	}
+	
+	$.each([ ['oneFrom'],['twoForm','twoTo'],['moreFrom','moreTo'] ],function( k,v ){
+		paramDatePicker.onClose=function (selectedDate) {
+			$("."+v[1]).datepicker("option", "minDate", selectedDate);
+		}
+		paramDatePicker.defaultDate="+0d";
+		$("."+v[0]).datepicker( paramDatePicker );
+		if( v[1]== undefined ) return;
+		
+		paramDatePicker.onClose=function (selectedDate) {
+			$("."+v[0]).datepicker("option", "maxDate", selectedDate);
+		}
+		paramDatePicker.defaultDate="+10d";
+		$("."+v[1]).datepicker( paramDatePicker );
+		
+	});
+	
+	
+		
+$(".fadate").on("click",function(){
+	$(this).prev("input").focus();
+});
+ 
+ 
+ 
+
 	var mt={
 		index(){
 			var p=location.pathname;

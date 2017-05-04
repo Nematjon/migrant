@@ -95,12 +95,13 @@ class AgentController extends Controller
      */
     public function actionIndex(){
 		//throw new \yii\web\ForbiddenHttpException('У вас недостаточно прав для выполнения указанного действия');
+	 
 		return $this->render('index');
     }
 
 	public function actionSflights(){
+		return $this->render('sflights');
 		if ( Yii::$app->user->can('createPost')) {
-			return $this->render('sflights');
 		}else{
 			throw new ForbiddenHttpException("fert");
 		}

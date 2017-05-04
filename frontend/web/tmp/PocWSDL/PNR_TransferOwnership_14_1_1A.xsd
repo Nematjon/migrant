@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/POWNUQ_14_1_1A" xmlns="http://xml.amadeus.com/POWNUQ_14_1_1A" elementFormDefault="qualified">
+  <xs:element name="PNR_TransferOwnership">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="recordLocator">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reservation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="controlNumber">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an6</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="6" />
+                          <xs:maxLength value="6" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="propagatioAction" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="actionRequestCode">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="officeIdentification" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="officeIdentificator">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="originatorDetails">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="inHouseIdentification1" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an9</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="9" />
+                                <xs:maxLength value="9" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="inHouseIdentification2" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..9</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="9" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="specificChanges" minOccurs="0" maxOccurs="3">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="actionRequestCode">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="oaIdentificator" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="referenceDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="value">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..5</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="5" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!--DRAFT: This document is under development and is not approved for 
+publication or reference. The Amadeus IT Group SA assumes no 
+responsibility for the application of the information contained 
+in this document or consequences arising from its application.-->
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 5.1.0 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B080000000000000095934D6FDB300C86EFFA15B9ED3024B6BB0C5803E8E0354E2ECDC75A17BB0C30548B7184CA9227CA5983A2FF7D94EC6EED61D876B1494AE6C7F3D2EB625BDCE465B1AC765B7E9166F369964EB3F9A4EC01A5384FB26CF1E1D3627E39596FCAF769BA4853966F727FEE00574A83112D70762F10B66461276AE047EFBB45923CB67A265A21A1C7596DDB84DDF7466A582AC71304EF95693091AA46561FA17EB8A5672BB8773DB0DA4AA02BC88D35C16B5B30E41D84C6E876C29C433D6E7AAD29D09D9D6A8E7E70251C44AFFDDA75257529878CD2F6F71A6EE17B0FA686BDF0F5714C07E6F33F750FE6F79DA730FF73F5740287CA1AB21C68A0346489862A9C9FD981E8DCF49A7AB40154F423ADF871B0FE9240DB5AE871446D1B19B83968AD87A4FD919C40AA83A87D520CEFD25A8D4951564B855E187F4594081E614B36C23D40C03DDCC1081ABF5DDB86F29A26361521B5E01A18B1447BA5404BBCB5CE13C797382275986380FB36B6042F941E4533FF05ABB3CAF82DF84198D88CB3D6BF6215FDB03B33360C10D8226D6C7A99A497630C57D6E55A516E1C9220B893AA0197AAF6545BB8F3C0135BE17CC87B6754ADFC791CC43B61508B7095E870A2FE0B57996F9227095AD1188256E97946A72CB427C7CD1D52D0DE5CBDDD578A445611CB236ABFEB7DD7FB95D5121C0F01C6A6D3CDC0F01D4E943958D7C626A6533610E259CE5E15E7F93EAFF6DB9B2A9B7FA4D56E8532BCC8AF193C76A45525B05A16EBB7E24C8403C15F3CBEDF7DDDDE7D611DFD150A8FA42E1B45E11959271594E217031011D9F150AF0CFE01DCEE8721358FAA632F02FDE178149D6773F613F33DC9806A040000
+-->
+
